@@ -7,13 +7,18 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
-    label: "How can I upgrade or reactivate my membership?",
+    label: "How can I upgrade my membership?",
     prompt: "How can I upgrade or reactivate my membership?",
     icon: "circle-question",
   },
   {
     label: "Are these live classes?",
     prompt: "Are these live classes?",
+    icon: "circle-question",
+  },
+  {
+    label: "Do you offer beginner classes?",
+    prompt: "Do you offer beginner classes?",
     icon: "circle-question",
   },
 ];
@@ -27,14 +32,28 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
     grayscale: {
       hue: 220,
       tint: 6,
-      shade: theme === "dark" ? -1 : -4,
+      shade: theme === "light" ? -1 : -4,
     },
     accent: {
-      primary: theme === "dark" ? "#f1f5f9" : "#0f172a",
+      primary: theme === "light" ? "#f1f5f9" : "#0f172a",
       level: 1,
     },
   },
-  radius: "round",
+    radius: 'pill',
+    density: 'normal',
+    typography: {
+      baseSize: 16,
+      fontFamily: '"OpenAI Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif',
+      fontFamilyMono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace',
+      fontSources: [
+        {
+          family: 'OpenAI Sans',
+          src: 'https://cdn.openai.com/common/fonts/openai-sans/v2/OpenAISans-Regular.woff2',
+          weight: 400,
+          style: 'normal',
+          display: 'swap'
+        }
+        ]
   // Add other theme options here
   // chatkit.studio/playground to explore config options
 });
