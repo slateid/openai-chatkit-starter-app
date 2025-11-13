@@ -9,7 +9,6 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
     label: "What can you do?",
     prompt: "How can I upgrade or reactivate my membership?",
-    prompt: "Are these live classes?",
     icon: "circle-question",
   },
 ];
