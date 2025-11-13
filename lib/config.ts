@@ -8,7 +8,8 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
     label: "What can you do?",
-    prompt: "How can I upgrade or reactivate my membership?", "Are these live classes?",
+    prompt: "How can I upgrade or reactivate my membership?",
+    prompt: "Are these live classes?",
     icon: "circle-question",
   },
 ];
